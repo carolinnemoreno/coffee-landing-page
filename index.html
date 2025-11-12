@@ -55,7 +55,7 @@
 	margin: 50px auto;
 	
 	}
-	.bi-cup-hot-fill, .bi-cup-straw, .bi-cup-hot, .bi-egg-fried {
+	.bi-cup-hot-fill, .bi-cup-straw, .bi-cup-hot, .bi-cookie {
 	font-size: 45px;
 	gap: 80px;
 	color: var(--marrom-escuro);
@@ -69,7 +69,7 @@
 	.bi-cup-hot:hover{
 	color: var(--amarelo);
 	}
-    .bi-egg-fried:hover{
+    .bi-cookie:hover{
 	color: var(--amarelo);
 	}
 	.texto h1{
@@ -82,6 +82,26 @@
 	.menu p{
 	margin:0;
 	text-align: center;
+	}
+	.coffee-list{
+	margin: auto;
+	width: 800px;
+	height: 350px;
+	background-color: var(--off-white);
+	display:flex;
+	}
+	.coffee{
+	width: 278px;
+	height: 350px;
+	border: 1px solid black;
+	}
+	.valor{
+	display:flex;
+	}
+	button{
+	background: none;
+	style:none;
+	border:none;
 	}
 	
 	
@@ -113,15 +133,50 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 </div>
 
 <div class="menu">
-<div class="icons"><i class="bi bi-cup-hot-fill"></i><p>Hot Coffee</p></div>
-<div class="icons"><i class="bi bi-cup-straw"></i><p>Cold Coffee</p></div>
-<div class="icons"><i class="bi bi-cup-hot"></i><p>Tea</p></div>
-<div class="icons"><i class="bi bi-egg-fried"></i><p>Desserts</p></div>
+<div class="icons" id="hot-coffee"><button onclick="mostrarCafe('hot')"><i class="bi bi-cup-hot-fill"></i></button><p>Hot Coffee</p></div>
+<div class="icons" id="cold-coffee"><button onclick="mostrarCafe('cold')"><i class="bi bi-cup-straw"></i></button><p>Cold Coffee</p></div>
+<div class="icons" id="tea"><button onclick="mostrarCafe('tea')"><i class="bi bi-cup-hot"></i></button><p>Tea</p></div>
+<div class="icons" id="dessert"><button onclick="mostrarCafe('dessert')"><i class="bi bi-cookie"></i></button><p>Desserts</p></div>
 </div>
 
-<div class="cards">
+<div class="coffee-list">
+<div class="coffee cold" id="coffee1">
+<img src="">
+<h1>Caramel Frappé</h1>
+<p>descriptiondescriptiondescrip</p>
+<div class="valor">
+<div>$15.50</div> <div><button>Order now</button></div> 
+</div>
+</div>
+<div  class="coffee hot">
+<img src="">
+<h1>Capuccino</h1>
+<p>descriptiondescriptiondescrip</p>
+<div class="valor">
+<div>$10</div> <div><button>Order now</button></div> 
+</div>
+
+
 
 </div>
+<div  class="coffee tea "></div>
+<div id="dessert" class="coffee dessert "></div>
+</div>
+
+<script>
+function mostrarCafe(tipo) {
+  const cafes = document.querySelectorAll('.coffee');
+
+  cafes.forEach(cafe => {
+    // mostra apenas o tipo selecionado
+    if (cafe.classList.contains(tipo)) {
+      cafe.style.display = 'block';
+    } else {
+      cafe.style.display = 'none';
+    }
+  });
+}
+</script>
 
 </body>
 
