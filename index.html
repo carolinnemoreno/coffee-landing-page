@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Coffee</title>
+	<style>
+	:root{
+	--off-white:#F8F8F8;
+	--bege:#D89A5B;
+	--bege-claro:#E1B181;
+	--marrom:#613C17;
+	
+	}
+	
+	body{
+	margin:40px;
+	background: linear-gradient(to right, white 50%, var(--bege) 50%);
+	
+	}
+	nav{
+	display:flex;
+	justify-content: space-between;
+	color: var(--marrom);
+	}
+	
+	nav .bi-cup-hot{
+	font-size: 30px;
+	}
+	
+	ul{
+	display:flex;
+	gap: 30px;
+	
+	list-style:none;
+	}
+	.bi-cup-hot{
+	color:--marrom;
+	}
+
+	.menu{
+	display:flex;
+	justify-content: space-between;
+	width: 400px;
+	height:73px;
+	background-color: var(--bege-claro);
+	border-radius: 40px;
+	padding:25px 80px 35px 80px;
+	margin: 50px auto;
+	
+	}
+	.bi-cup-hot-fill, .bi-cup-straw, .bi-cup-hot, .bi-egg-fried {
+	font-size: 60px;
+	gap: 80px;
+	}
+	
+	.texto h1{
+	font-size: 45px;
+	}
+	.texto p{
+	font-size: 25px;
+	line-height:1.1;
+	}
+	.menu p{
+	margin:0;
+	text-align: center;
+	}
+	
+	
+</style>
+</head>
+<body>
+
+<nav>
+<i class="bi bi-cup-hot"></i>
+<ul>
+<li>Home</li>
+<li>Menu</li>
+<li>Delivery</li>
+</ul>
+<div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+<i class="bi bi-cart2"></i>
+</nav>
+
+<div class="texto">
+<h1>The <span style="color: yellow;">coffee</span> you will <br>
+fall in <span style="color: yellow;">love</span> with</h1>
+<p>Sip, savor, and spread the love - where <br>
+every cup is caffeinated hug at our cozy coffee heaven</p>
+</div>
+
+<div class="menu">
+<div class="icons"><i class="bi bi-cup-hot-fill"></i><p>Hot Coffee</p></div>
+<div class="icons"><i class="bi bi-cup-straw"></i><p>Cold Coffee</p></div>
+<div class="icons"><i class="bi bi-cup-hot"></i><p>Tea</p></div>
+<div class="icons"><i class="bi bi-egg-fried"></i><p>Desserts</p></div>
+</div>
+
+<div class="cards">
+<h1></h1>
+</div>
+
+</body>
+
+</html>
