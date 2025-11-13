@@ -70,6 +70,21 @@
 	.bi-cup-hot{
 	color:--marrom;
 	}
+	
+	#lista-carrinho {
+  width: 400px;
+  margin: 20px auto;
+}
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.item-carrinho img {
+  border-radius: 10px;
+}
+	
 	</style>
 	
 </head>
@@ -79,9 +94,9 @@
 <nav>
 <i class="bi bi-cup-hot"></i>
 <ul>
-<li>Home</li>
-<li>Menu</li>
-<li>Delivery</li>
+<a href="index.html"><li>Home</li></a>
+<a href="index.html#all"><li>Menu</li></a>
+<a href="index.html#all"><li>Delivery</li></a>
 </ul>
 <div class="container-fluid">
     <form class="d-flex" role="search">
@@ -91,5 +106,31 @@
   </div>
 <a href="order.html"><i class="bi bi-cart2"></i></a>
 </nav>
+<div class="cart"> </div>
+
+<h2>Meu carrinho</h2>
+<ul id="lista-carrinho"></ul>
+
+<script>
+const lista = document.getElementById('lista-carrinho');
+const pedido = JSON.parse(localStorage.getItem('order')) || [];
+
+if (pedido.length === 0) {
+  lista.innerHTML = '<p>Carrinho vazio</p>';
+} else {
+  pedido.forEach(item => {
+    const div = document.createElement('div');
+    div.classList.add('item-carrinho');
+    div.innerHTML = `
+      <img src="${item.imagem}"  width="100">
+      <h3>${item.nome}</h3>
+      <p>R$ ${item.preco.toFixed(2)}</p>
+      <hr>
+    `;
+    lista.appendChild(div);
+  });
+}
+</script>
+
 </body>
 </html>
