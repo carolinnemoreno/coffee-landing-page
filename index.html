@@ -47,6 +47,11 @@
 	font-size: 30px;
 	}
 	
+	.bi-cart2{
+	font-size: 20px;
+	margin-top: 10px;
+	}
+	
 	ul{
 	display:flex;
 	gap: 30px;
@@ -67,12 +72,12 @@
 	padding:20px 60px 25px 60px;
 	margin: 100px auto;
 	}
-	.bi-cup-hot-fill, .bi-cup-straw, .bi-cup-hot, .bi-cookie {
+	.bi-cup-hot-fill, .bi-cup-straw, .bi-cup-hot, .bi-cookie,.bi-three-dots {
 	font-size: 45px;
 	gap: 80px;
 	color: var(--marrom-escuro);
 	}
-	.bi-cup-hot-fill:hover, .bi-cup-straw:hover, .bi-cup-hot:hover, .bi-cookie:hover {
+	.bi-cup-hot-fill:hover, .bi-cup-straw:hover, .bi-cup-hot:hover, .bi-cookie:hover, .bi-three-dots:hover {
 	color: var(--amarelo);
 	}
 	.texto h1{
@@ -184,13 +189,14 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <div class="icons" id="hot-coffee"><button onclick="mostrarCafe('hot')"><i class="bi bi-cup-hot-fill"></i></button><p>Hot Coffee</p></div>
 <div class="icons" id="cold-coffee"><button onclick="mostrarCafe('cold')"><i class="bi bi-cup-straw"></i></button><p>Cold Coffee</p></div>
 <div class="icons" id="tea"><button onclick="mostrarCafe('tea')"><i class="bi bi-cup-hot"></i></button><p>Tea</p></div>
-<div class="icons" id="dessert"><button onclick="mostrarCafe('dessert')"><i class="bi bi-cookie"></i></button><p>Desserts</p></div>
+<div class="icons" id="dessert"><button onclick="mostrarCafe('dessert')"><i class="bi bi-cookie"></i></button><p>Desserts</P>
+</div>
+<div class="icons" id="all"><button onclick="mostrarCafe('all')"><i class="bi bi-three-dots"></i></button></div>
 </div>
 
 
-
 <div class="coffee-list">
-<div class="coffee cold" id="coffee1">
+<div class="coffee cold all" id="coffee1">
 <img src="https://images.pexels.com/photos/1193335/pexels-photo-1193335.jpeg">
 <h1>Caramel Frappé</h1>
 <p>A delightful and indulgent icy bevarage bleding rich coffee, milk,ice, and sweet caramel syrup, creating a smooth treat with a perfect harmony.</p>
@@ -198,7 +204,7 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <div>$15.50</div> <div><button>Order now</button></div> 
 </div>
 </div>
-<div class="coffee cold" id="coffee1">
+<div class="coffee cold all" id="coffee1">
 <img src="https://images.pexels.com/photos/214333/pexels-photo-214333.jpeg">
 <h1>Frappé</h1>
 <p>A delightful and indulgent icy bevarage bleding rich coffee, milk,ice, and sweet caramel syrup, creating a smooth treat with a perfect harmony.</p>
@@ -206,7 +212,7 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <div>$15.50</div> <div><button>Order now</button></div> 
 </div>
 </div>
-<div  class="coffee hot">
+<div  class="coffee hot all">
 <img src="https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg">
 <h1>Capuccino</h1>
 <p>descriptiondescriptiondescrip</p>
@@ -214,7 +220,7 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <div>$10</div> <div><button>Order now</button></div> 
 </div>
 </div>
-<div  class="coffee tea">
+<div  class="coffee tea all">
 <img src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg">
 <h1>Tea</h1>
 <p>descriptiondescriptiondescrip</p>
@@ -223,7 +229,7 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 </div>
 </div>
 
-<div id="dessert" class="coffee dessert">
+<div id="dessert" class="coffee dessert all">
 <img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg">
 <h1>Dessert</h1>
 <p>descriptiondescriptiondescrip</p>
@@ -246,6 +252,8 @@ function mostrarCafe(tipo) {
     }
   });
 }
+
+
 </script>
 
 </body>
