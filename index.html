@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<title>Coffee</title>
 	<style>
@@ -23,6 +23,8 @@
 	margin:0px 300px 100px 200px;
 	position: relative;
     background: var(--off-white);
+	}
+	
 	
 	.bg-square {
 	position: absolute;
@@ -31,14 +33,13 @@
 	width: 600px;
 	height: 600px;
 	background-color: var(--bege);
-	z-index: -1; /* fica atrás do conteúdo */
-}
+	z-index: -1; }
 
 	
-	}
+	
 	nav{
 	display:flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	color: var(--marrom);
 	}
 	
@@ -49,23 +50,22 @@
 	ul{
 	display:flex;
 	gap: 30px;
-	
 	list-style:none;
 	}
+	
 	.bi-cup-hot{
 	color:--marrom;
 	}
 
 	.menu{
 	display:flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	width: 800px;
 	height:73px;
 	background-color: var(--bege-claro);
 	border-radius: 40px;
 	padding:20px 60px 25px 60px;
 	margin: 100px auto;
-	
 	}
 	.bi-cup-hot-fill, .bi-cup-straw, .bi-cup-hot, .bi-cookie {
 	font-size: 45px;
@@ -186,6 +186,8 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <div class="icons" id="tea"><button onclick="mostrarCafe('tea')"><i class="bi bi-cup-hot"></i></button><p>Tea</p></div>
 <div class="icons" id="dessert"><button onclick="mostrarCafe('dessert')"><i class="bi bi-cookie"></i></button><p>Desserts</p></div>
 </div>
+
+
 
 <div class="coffee-list">
 <div class="coffee cold" id="coffee1">
