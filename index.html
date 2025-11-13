@@ -260,7 +260,18 @@ function mostrarCafe(tipo) {
     }
   });
 }
+function AddCarrinho(nome, preco,imagem){
+   let order = JSON.parse(localStorage.getItem('order')) || [];
 
+  // Adiciona o novo item
+  order.push({ nome: nome, preco: preco, imagem: imagem });
+
+  // Salva de volta no localStorage
+  localStorage.setItem('order', JSON.stringify(order));
+
+  alert('Produto adicionado ao carrinho!');
+
+}
 
 </script>
 
