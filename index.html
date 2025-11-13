@@ -12,15 +12,15 @@
 	<style>
 	:root{
 	--off-white:#F8F8F8;
-	--bege:#EDA840;
-	--bege-claro:#F1BB6A;
-	--marrom:#613C17;
-	--marrom-escuro: #3B240E;
-	--amarelo: #F9E1BE;
+	--bege:#ffbd7f;
+	--bege-claro:#f6ebda;
+	--marrom:#835e4c;
+	--marrom-escuro: #a0583c;
+	--amarelo: #f4ae26;
 	}
 	
 	body{
-	margin:40px;
+	margin:100px 400px 100px 400px;
 	background: linear-gradient(to right, white 50%, var(--bege) 50%);
 	
 	}
@@ -52,7 +52,7 @@
 	background-color: var(--bege-claro);
 	border-radius: 40px;
 	padding:20px 60px 25px 60px;
-	margin: 50px auto;
+	margin: 300px auto;
 	
 	}
 	.bi-cup-hot-fill, .bi-cup-straw, .bi-cup-hot, .bi-cookie {
@@ -85,34 +85,57 @@
 	}
 	.coffee-list{
 	margin: auto;
-	width: 800px;
-	height: 350px;
-	background-color: var(--off-white);
+	width: 925px;
+	height: 250px;
+	
 	display:flex;
 	}
 	.coffee{
-	width: 200px;
-	height: 250px;
-	border: 1px solid black;
+	width: 180px;
+	height: 350px;
+	border: 1px solid var(--marrom);
 	border-radius: 20px;
 	margin-left: 10px;
 	padding: 0 10px 0 10px;
 	}
 	.valor{
 	display:flex;
+	justify-content: space-between;
+	}
+	.valor button{
+		background-color: #a0583c;
+		border:none;
+		padding: 5px 10px 5px 10px;
+		border-radius: 10px;
 	}
 	.icons button{
 	background: none;
 	style:none;
 	border:none;
 	}
-	h1{
+	.coffee h1{
 	font-size: 21px;
 	color: var(--marrom);
 	text-align: center;
 	margin-top: 0;
 	}
+
+	img{
+      width: 180px;
+	height: 120px;
+	margin-top: 10px;
+	}
 	
+	.hot{
+     background-color: var(--marrom);
+     
+	}
+	.hot h1{
+		color: var(--bege-claro);
+	}
+	.text{
+		display:flex;
+	}
 	
 	</style>
 </head>
@@ -135,10 +158,14 @@
 </nav>
 
 <div class="texto">
-<h1>The <span style="color: #E9F48A;">coffee</span> you will <br>
-fall in <span style="color: #E9F48A;">love</span> with</h1>
+<h1>The <span style="color: var(--amarelo);">coffee</span> you will <br>
+fall in <span style="color: var(--amarelo);">love</span> with</h1>
 <p>Sip, savor, and spread the love - where <br>
 every cup is caffeinated hug at our cozy coffee heaven</p>
+<div class="coffeeX">
+<img src="assets/coffe-image2.jpg" alt="">
+
+</div>
 </div>
 
 <div class="menu">
@@ -150,26 +177,38 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 
 <div class="coffee-list">
 <div class="coffee cold" id="coffee1">
-<img src="">
+<img src="https://images.pexels.com/photos/1193335/pexels-photo-1193335.jpeg">
 <h1>Caramel Frappé</h1>
-<p>descriptiondescriptiondescrip</p>
+<p>A delightful and indulgent icy bevarage bleding rich coffee, milk,ice, and sweet caramel syrup, creating a smooth treat with a perfect harmony.</p>
 <div class="valor">
 <div>$15.50</div> <div><button>Order now</button></div> 
 </div>
 </div>
 <div  class="coffee hot">
-<img src="">
+<img src="https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg">
 <h1>Capuccino</h1>
 <p>descriptiondescriptiondescrip</p>
 <div class="valor">
 <div>$10</div> <div><button>Order now</button></div> 
 </div>
-
-
-
 </div>
-<div  class="coffee tea "></div>
-<div id="dessert" class="coffee dessert "></div>
+<div  class="coffee tea ">
+<img src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg">
+<h1>Tea</h1>
+<p>descriptiondescriptiondescrip</p>
+<div class="valor">
+<div>$5.50</div> <div><button>Order now</button></div> 
+</div>
+</div>
+
+<div id="dessert" class="coffee dessert ">
+<img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg">
+<h1>Dessert</h1>
+<p>descriptiondescriptiondescrip</p>
+<div class="valor">
+<div>$5.50</div> <div><button>Order now</button></div> 
+</div>
+</div>
 </div>
 
 <script>
