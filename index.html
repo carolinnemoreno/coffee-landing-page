@@ -20,8 +20,20 @@
 	}
 	
 	body{
-	margin:100px 400px 100px 400px;
-	background: linear-gradient(to right, white 50%, var(--bege) 50%);
+	margin:0px 300px 100px 200px;
+	position: relative;
+    background: var(--off-white);
+	
+	.bg-square {
+	position: absolute;
+	top: 0px;
+	left: 550px;
+	width: 600px;
+	height: 600px;
+	background-color: var(--bege);
+	z-index: -1; /* fica atrás do conteúdo */
+}
+
 	
 	}
 	nav{
@@ -47,12 +59,12 @@
 	.menu{
 	display:flex;
 	justify-content: space-between;
-	width: 400px;
+	width: 800px;
 	height:73px;
 	background-color: var(--bege-claro);
 	border-radius: 40px;
 	padding:20px 60px 25px 60px;
-	margin: 300px auto;
+	margin: 100px auto;
 	
 	}
 	.bi-cup-hot-fill, .bi-cup-straw, .bi-cup-hot, .bi-cookie {
@@ -60,16 +72,7 @@
 	gap: 80px;
 	color: var(--marrom-escuro);
 	}
-	.bi-cup-hot-fill:hover{
-	color: var(--amarelo);
-	}
-	.bi-cup-straw:hover{
-	color: var(--amarelo);
-	}
-	.bi-cup-hot:hover{
-	color: var(--amarelo);
-	}
-    .bi-cookie:hover{
+	.bi-cup-hot-fill:hover, .bi-cup-straw:hover, .bi-cup-hot:hover, .bi-cookie:hover {
 	color: var(--amarelo);
 	}
 	.texto h1{
@@ -87,13 +90,15 @@
 	margin: auto;
 	width: 925px;
 	height: 250px;
-	
 	display:flex;
+	flex-wrap: wrap;
 	}
 	.coffee{
+    text-align: center;
 	width: 180px;
 	height: 350px;
 	border: 1px solid var(--marrom);
+	background-color: var(--bege-claro);
 	border-radius: 20px;
 	margin-left: 10px;
 	padding: 0 10px 0 10px;
@@ -103,10 +108,10 @@
 	justify-content: space-between;
 	}
 	.valor button{
-		background-color: #a0583c;
-		border:none;
-		padding: 5px 10px 5px 10px;
-		border-radius: 10px;
+	background-color: #a0583c;
+	border:none;
+	padding: 5px 10px 5px 10px;
+	border-radius: 10px;
 	}
 	.icons button{
 	background: none;
@@ -126,21 +131,26 @@
 	margin-top: 10px;
 	}
 	
-	.hot{
-     background-color: var(--marrom);
-     
-	}
+
 	.hot h1{
 		color: var(--bege-claro);
+		
 	}
+	
+	.hot:hover, .cold:hover, .dessert:hover, .tea:hover{
+	transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+	background-color: var(--marrom);
+	}
+	
 	.text{
-		display:flex;
+	display:flex;
 	}
 	
 	</style>
 </head>
 <body>
-
+<div class="bg-square"></div>
 <nav>
 <i class="bi bi-cup-hot"></i>
 <ul>
@@ -184,6 +194,14 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <div>$15.50</div> <div><button>Order now</button></div> 
 </div>
 </div>
+<div class="coffee cold" id="coffee1">
+<img src="https://images.pexels.com/photos/214333/pexels-photo-214333.jpeg">
+<h1>Frappé</h1>
+<p>A delightful and indulgent icy bevarage bleding rich coffee, milk,ice, and sweet caramel syrup, creating a smooth treat with a perfect harmony.</p>
+<div class="valor">
+<div>$15.50</div> <div><button>Order now</button></div> 
+</div>
+</div>
 <div  class="coffee hot">
 <img src="https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg">
 <h1>Capuccino</h1>
@@ -192,7 +210,7 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <div>$10</div> <div><button>Order now</button></div> 
 </div>
 </div>
-<div  class="coffee tea ">
+<div  class="coffee tea">
 <img src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg">
 <h1>Tea</h1>
 <p>descriptiondescriptiondescrip</p>
@@ -201,7 +219,7 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 </div>
 </div>
 
-<div id="dessert" class="coffee dessert ">
+<div id="dessert" class="coffee dessert">
 <img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg">
 <h1>Dessert</h1>
 <p>descriptiondescriptiondescrip</p>
