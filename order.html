@@ -24,7 +24,9 @@
 	position: relative;
     background: var(--off-white);
 	}
-	
+    .homeNav:hover, .menuNav:hover, .deliveryNav:hover  {
+	color: var(--amarelo);
+	}
 	
 	.bg-square {
 	position: absolute;
@@ -85,6 +87,12 @@
 .item-carrinho img {
   border-radius: 10px;
 }
+.item-carrinho button{
+  background-color: var(--marrom);
+  border:none;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
 	
 	</style>
 	
@@ -94,9 +102,9 @@
 <nav>
 <i class="bi bi-cup-hot"></i>
 <ul>
-<a href="index.html"><li>Home</li></a>
-<a href="index.html#all"><li>Menu</li></a>
-<a href="index.html#all"><li>Delivery</li></a>
+<a href="index.html"><li class="homeNav">Home</li></a>
+<a href="index.html#all"><li class="menuNav">Menu</li></a>
+<a href="index.html#all"><li class="deliveryNav">Delivery</li></a>
 </ul>
 <div class="container-fluid">
     <form class="d-flex" role="search">
@@ -104,7 +112,6 @@
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
   </div>
-<a href="order.html"><i class="bi bi-cart2"></i></a>
 </nav>
 <div class="cart"> </div>
 
