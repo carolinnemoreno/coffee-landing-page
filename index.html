@@ -86,7 +86,7 @@
 	gap: 80px;
 	color: var(--marrom-escuro);
 	}
-	.bi-cup-hot-fill:hover, .bi-cup-straw:hover, .bi-cup-hot:hover, .bi-cookie:hover, .bi-three-dots:hover, .bi-cart2:hover  {
+	.bi-cup-hot-fill:hover, .bi-cup-straw:hover, .bi-cup-hot:hover, .bi-cookie:hover, .bi-three-dots:hover, .bi-cart2:hover, .homeNav:hover, .menuNav:hover, .deliveryNav:hover  {
 	color: var(--amarelo);
 	}
 	.texto h1{
@@ -167,6 +167,14 @@
 	display:flex;
 	}
 	
+	.home{
+	display:flex;
+	}
+	
+	.coffeeX img{
+	margin: 90px;
+	}
+	
 	</style>
 </head>
 <body>
@@ -174,9 +182,9 @@
 <nav>
 <i class="bi bi-cup-hot"></i>
 <ul>
-<li>Home</li>
-<a href="#all"><li>Menu</li></a>
-<a href="#all"><li>Delivery</li></a>
+<li class="homeNav">Home</li>
+<a href="#all"><li class="menuNav">Menu</li></a>
+<a href="#all"><li class="deliveryNav">Delivery</li></a>
 </ul>
 <div class="container-fluid">
     <form class="d-flex" role="search">
@@ -187,13 +195,18 @@
 <a href="order.html"><i class="bi bi-cart2"></i></a>
 </nav>
 
+
+<div class="home">
 <div class="texto">
 <h1>The <span style="color: var(--amarelo);">coffee</span> you will <br>
 fall in <span style="color: var(--amarelo);">love</span> with</h1>
 <p>Sip, savor, and spread the love - where <br>
 every cup is caffeinated hug at our cozy coffee heaven</p>
 </div>
-
+<div class="coffeeX">
+<img src="cafe.png" alt="cafe">
+</div>
+</div>
 <div class="menu">
 <div class="icons" id="hot-coffee"><button onclick="mostrarCafe('hot')"><i class="bi bi-cup-hot-fill"></i></button><p>Hot Coffee</p></div>
 <div class="icons" id="cold-coffee"><button onclick="mostrarCafe('cold')"><i class="bi bi-cup-straw"></i></button><p>Cold Coffee</p></div>
@@ -226,7 +239,7 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <h1>Capuccino</h1>
 <p>A delightful and indulgent icy bevarage bleding rich coffee, milk,ice, and sweet caramel syrup, creating a smooth treat with a perfect harmony.</p>
 <div class="valor">
-<div>$10</div> <div><button class="order">Order now</button></div> 
+<div>$10</div> <div><button onclick="addCarrinho ('Capuccino', 10, 'https://images.pexels.com/photos/302904/pexels-photo-302904.jpeg' )" class="order">Order now</button></div> 
 </div>
 </div>
 <div  class="coffee tea all">
