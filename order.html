@@ -112,6 +112,7 @@
 <ul id="lista-carrinho"></ul>
 
 <script>
+function mostrarCarrinho(){
 const lista = document.getElementById('lista-carrinho');
 const pedido = JSON.parse(localStorage.getItem('order')) || [];
 
@@ -131,17 +132,17 @@ if (pedido.length === 0) {
     lista.appendChild(div);
   });
 }
-
+}
 function removerItem(idProduto){
 let pedidos = JSON.parse(localStorage.getItem('order')) || [];
    const pedidosF = pedidos.filter(item => item.id !== idProduto);
      localStorage.setItem("order", JSON.stringify(pedidosF));
 	 console.log("Item removido!");
   
+
 mostrarCarrinho(); 
-
 }
-
+mostrarCarrinho(); 
 </script>
 
 </body>
