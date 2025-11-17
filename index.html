@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Coffee Shop</title>
 	<style>
+	
 	:root{
 	--off-white:#F8F8F8;
 	--bege:#ffbd7f;
@@ -41,7 +42,7 @@
 	nav{
 	display:flex;
 	justify-content: space-around;
-	color: var(--marrom);
+	color: var(--marrom-mais-escuro);
 	}
 	
 	nav .bi-cup-hot{
@@ -237,6 +238,120 @@
 	display:flex;
 	}
 	
+	@media(min-width:400px)and (max-width:980px){
+	
+	
+	.menu{
+	display:flex;
+	justify-content: space-around;
+	width: 400px;
+	height:60px;
+	background-color: var(--bege-claro);
+	border-radius: 20px;
+	padding:10px 10px 10px 10px;
+	margin: 20px auto;
+	margin-left:20px;
+	}
+	
+	.bi-cup-hot-fill, .bi-cup-straw, .bi-cup-hot, .bi-cookie,.bi-three-dots {
+	font-size: 25px;
+	gap: 5px;
+	color: var(--marrom-mais-escuro);
+	}
+	
+	.coffee-list{
+	margin: auto;
+	width: 400px;
+	height: 250px;
+	display:flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin-bottom: 150px;
+	}
+	
+	.texto h1{
+	font-size: 25px;
+	margin-left:20px;
+	color: var(--marrom-mais-escuro);
+	}
+	.texto p{
+	font-size: 15px;
+	line-height:1.1;
+	margin-left:20px;
+	}
+	.container-fluid{
+	display:none;
+	}
+	.social{
+	display:flex;
+	margin-top: 60px;
+	margin-left:20px;
+	}
+	
+	.social-icon{
+	display:flex;
+	gap:5px;
+	margin-top:80px;
+	margin-left: 80px;
+	font-size: 32px;
+	color: var(--marrom-mais-escuro);
+	}
+	
+	.about-img img{
+	width:150px;
+	height:150px;
+	margin-left:20px;
+	margin-top: 30px;
+	border: 5px solid var(--off-white);
+	}
+	
+	.texto2{
+	width:500px;
+	height:200px;
+    margin-left: 40px;
+	margin-top: 40px;
+	color: var(--marrom-mais-escuro)
+	}
+	
+	.coffee{
+    text-align: center;
+	width: 90px;
+	height: 150px;
+	border: 1px solid var(--marrom);
+	background-color: var(--marrom);
+	border-radius: 20px;
+	margin-left: 10px;
+	padding: 0 10px 0 10px;
+	}
+	
+	img{
+    width: 90px;
+	height: 60px;
+	margin-top: 5px;
+	}
+	
+	.coffee p {
+	display:none;
+	}
+	.coffee h1{
+	font-size: 15px;
+	}
+	
+	.order{
+	background-color: #a0583c;
+	border:1px solid var(--marrom);
+	padding: 2px;
+	font-size:9px;
+	border-radius: px;
+	}
+	nav .bi-cart2{
+	font-size: 20px;
+	margin:20px;
+	margin-top: 20px;
+	}
+
+	
+	}
 	
 	</style>
 </head>
@@ -250,8 +365,8 @@
 <a href="#all"><li class="deliveryNav">Delivery</li></a>
 </ul>
 <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+    <form id="formSearch" class="d-flex" role="search">
+      <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search"/>
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
   </div>
@@ -286,7 +401,7 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <h1>Caramel Frappé</h1>
 <p>A delightful and indulgent icy bevarage bleding rich coffee, milk,ice, and sweet caramel syrup, creating a smooth treat with a perfect harmony.</p>
 <div class="valor">
-<div>$15.50</div> <div><button onclick="AddCarrinho('Caramel Frappé', 15.50, 'https://images.pexels.com/photos/1193335/pexels-photo-1193335.jpeg' )" class="order">Order now</button></div> 
+<div>$15</div> <div><button onclick="AddCarrinho('Caramel Frappé', 15.50, 'https://images.pexels.com/photos/1193335/pexels-photo-1193335.jpeg' )" class="order">Order now</button></div> 
 </div>
 </div>
 <div class="coffee cold all" id="coffee1">
@@ -294,7 +409,7 @@ every cup is caffeinated hug at our cozy coffee heaven</p>
 <h1>Frappé</h1>
 <p>A delightful and indulgent icy bevarage bleding rich coffee, milk,ice, and sweet caramel syrup, creating a smooth treat with a perfect harmony.</p>
 <div class="valor">
-<div>$15.50</div> <div><button onclick="AddCarrinho('Frappé', 15.50, 'https://images.pexels.com/photos/214333/pexels-photo-214333.jpeg' )" class="order">Order now</button></div> 
+<div>$15</div> <div><button onclick="AddCarrinho('Frappé', 15.50, 'https://images.pexels.com/photos/214333/pexels-photo-214333.jpeg' )" class="order">Order now</button></div> 
 </div>
 </div>
 <div  class="coffee hot all">
@@ -366,6 +481,7 @@ function AddCarrinho(nome, preco,imagem){
   alert('Produto adicionado ao carrinho!');
 
 }
+
 
 </script>
 
